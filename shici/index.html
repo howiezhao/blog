@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-darkmode="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>Howie's Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/heti/umd/heti.min.css">
+</head>
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+
+      <hr>
+
+      <section class="demo">
+        <div class="heti heti--ancient">
+          <ul>
+            <li><a href="tengwanggexu.html">滕王阁序</a></li>
+            <li><a href="xiatiandetaiyang.html">夏天的太阳</a></li>
+            <li><a href="wuti.html">无题</a></li>
+            <li><a href="jiuyue.html">九月</a></li>
+            <li><a href="mianchaodahai.html">面朝大海，春暖花开</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <hr>
+    </article>
+  </main>
+
+  <script src="https://unpkg.com/heti/umd/heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    const heti = new Heti('.article')
+    heti.autoSpacing()
+  </script>
+</body>
+</html>

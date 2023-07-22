@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-darkmode="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>Howie's Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/heti/umd/heti.min.css">
+</head>
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+
+      <hr>
+
+      <section class="demo">
+        <div class="heti heti--poetry">
+          <h1>夏天的太阳<span class="heti-meta heti-small">海子</span></h1>
+          <p class="heti-verse heti-x-large">
+            夏天<br>
+            如果这条街没有鞋匠<br>
+            <br>
+            我就打赤脚<br>
+            站到太阳下看太阳<br>
+            <br>
+            我想到在白天出生的孩子<br>
+            一定是出于故意<br>
+            <br>
+            你来人家一趟<br>
+            你要看看太阳<br>
+            <br>
+            和你的心上人<br>
+            一起走在街上<br>
+            <br>
+            了解她<br>
+            也要了解太阳<br>
+            <br>
+            （一组健康的工人正午抽着纸烟）<br>
+            <br>
+            夏天的太阳<br>
+            太阳<br>
+            <br>
+            当年基督入世<br>
+            也在这阳光下长大
+          </p>
+        </div>
+      </section>
+
+      <hr>
+    </article>
+  </main>
+
+  <script src="https://unpkg.com/heti/umd/heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    const heti = new Heti('.article')
+    heti.autoSpacing()
+  </script>
+</body>
+</html>

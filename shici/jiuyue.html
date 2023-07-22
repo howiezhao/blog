@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-darkmode="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>Howie's Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/heti/umd/heti.min.css">
+</head>
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+
+      <hr>
+
+      <section class="demo">
+        <div class="heti heti--poetry">
+          <h1>九月<span class="heti-meta heti-small">海子</span></h1>
+          <p class="heti-verse heti-x-large">
+            目击众神死亡的草原上野花一片<br>
+            远在远方的风比远方更远<br>
+            我的琴声呜咽 泪水全无<br>
+            我把这远方的远归还草原<br>
+            一个叫木头 一个叫马尾<br>
+            我的琴声呜咽 泪水全无<br>
+            <br>
+            远方只有在死亡中凝聚野花一片<br>
+            明月如镜 高悬草原 映照千年岁月<br>
+            我的琴声呜咽 泪水全无<br>
+            只身打马过草原
+          </p>
+        </div>
+      </section>
+
+      <hr>
+    </article>
+  </main>
+
+  <script src="https://unpkg.com/heti/umd/heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    const heti = new Heti('.article')
+    heti.autoSpacing()
+  </script>
+</body>
+</html>
