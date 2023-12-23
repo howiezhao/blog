@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-darkmode="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>Howie's Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/heti/0.9.4/heti.min.css">
+</head>
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+
+      <hr>
+
+      <section class="demo">
+        <div class="heti heti--poetry">
+          <h1>种种可能<span class="heti-meta heti-small">辛波斯卡</span></h1>
+          <p class="heti-verse heti-x-large">
+            我偏爱电影。<br>
+            我偏爱猫。<br>
+            我偏爱华尔塔河沿岸的橡树。<br>
+            我偏爱狄更斯胜过陀思妥耶夫斯基。<br>
+            我偏爱我对人群的喜欢<br>
+            胜过我对人类的爱。<br>
+            我偏爱在手边摆放针线，以备不时之需。<br>
+            我偏爱绿色。<br>
+            我偏爱不抱持把一切<br>
+            都归咎于理性的想法。<br>
+            我偏爱例外。<br>
+            我偏爱及早离去。<br>
+            我偏爱和医生聊些别的话题。<br>
+            我偏爱线条细致的老式插画。<br>
+            我偏爱写诗的荒谬<br>
+            胜过不写诗的荒谬。<br>
+            我偏爱，就爱情而言，可以天天庆祝的<br>
+            不特定纪念日。<br>
+            我偏爱不向我做任何<br>
+            承诺的道德家。<br>
+            我偏爱狡猾的仁慈胜过过度可信的那种。<br>
+            我偏爱穿便服的地球。<br>
+            我偏爱被征服的国家胜过征服者。<br>
+            我偏爱有些保留。<br>
+            我偏爱混乱的地狱胜过秩序井然的地狱。<br>
+            我偏爱格林童话胜过报纸头版。<br>
+            我偏爱不开花的叶子胜过不长叶子的花。<br>
+            我偏爱尾巴没被截短的狗。<br>
+            我偏爱淡色的眼睛，因为我是黑眼珠。<br>
+            我偏爱书桌的抽屉。<br>
+            我偏爱许多此处未提及的事物<br>
+            胜过许多我也没有说到的事物。<br>
+            我偏爱自由无拘的零<br>
+            胜过排列在阿拉伯数字后面的零。<br>
+            我偏爱昆虫的时间胜过星星的时间。<br>
+            我偏爱敲击木头。<br>
+            我偏爱不去问还要多久或什么时候。<br>
+            我偏爱牢记此一可能 ——<br>
+            存在的理由不假外求。
+          </p>
+        </div>
+      </section>
+
+      <hr>
+    </article>
+  </main>
+
+  <script src="../assets/heti/0.9.4/heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    const heti = new Heti('.article')
+    heti.autoSpacing()
+  </script>
+</body>
+</html>
