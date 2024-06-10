@@ -9,42 +9,96 @@
   <meta name="color-scheme" content="dark light">
   <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
   <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/swiper/11.1.4/swiper-bundle.min.css"/>
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    #douban-badgemaker {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #google-my-maps {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="vi">
-    <h1 class="animate-slide-in-down">Howie Zhao</h1>
-    <div class="quote">
-      <span class="quote-line quote-line-start animate-slide-in-left"></span>
-      <span class="quote-icon quote-icon-start animate-slide-in-down">
-        <i class="icon icon-quotes-left"></i>
-      </span>
-      <p class="quote-content animate-slide-in-down">朝饮木兰之坠露兮，夕餐秋菊之落英。</p>
-      <p class="quote-author animate-slide-in-down">《离骚》—— <em>屈原</em></p>
-      <span class="quote-icon quote-icon-end animate-slide-in-up">
-        <i class="icon icon-quotes-right"></i>
-      </span>
-      <span class="quote-line quote-line-end animate-slide-in-right"></span>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="vi">
+          <h1 class="animate-slide-in-down">Howie Zhao</h1>
+          <div class="quote">
+            <span class="quote-line quote-line-start animate-slide-in-left"></span>
+            <span class="quote-icon quote-icon-start animate-slide-in-down">
+              <i class="icon icon-quotes-left"></i>
+            </span>
+            <p class="quote-content animate-slide-in-down">朝饮木兰之坠露兮，夕餐秋菊之落英。</p>
+            <p class="quote-author animate-slide-in-down">《离骚》—— <em>屈原</em></p>
+            <span class="quote-icon quote-icon-end animate-slide-in-up">
+              <i class="icon icon-quotes-right"></i>
+            </span>
+            <span class="quote-line quote-line-end animate-slide-in-right"></span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/howiezhao" class="animate-slide-in-down">GitHub</a>
+            <a href="https://howiezhao.github.io" class="animate-slide-in-down">Notes</a>
+            <a href="shici/index.html" class="animate-slide-in-down">Blog</a>
+            <a href="https://space.bilibili.com/23433050" class="animate-slide-in-down">bilibili</a>
+          </div>
+          <div class="location">
+            <span class="location-icon animate-slide-in-up">
+              <i class="icon icon-map-pin"></i>
+            </span>
+            <span class="location-text animate-slide-in-down">Xi'an - China</span>
+          </div>
+          <div class="relocating">
+            Navigating to: <span class="relocate-location"></span>...
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" id='douban-badgemaker'>
+        <script type="text/javascript" src="https://www.douban.com/service/badge/130184841/?selection=latest&amp;picsize=small&amp;show=collection&amp;n=10&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=5"></script>
+      </div>
+<!--      <div class="swiper-slide" id='google-my-maps'>-->
+<!--        <iframe src="https://www.google.com/maps/d/embed?mid=1zAUy9W-HvoeWhHok14QleksZFRCJFpM&ehbc=2E312F" width="90%" height="90%"></iframe>-->
+<!--      </div>-->
     </div>
-    <div class="links">
-      <a href="https://github.com/howiezhao" class="animate-slide-in-down">GitHub</a>
-      <a href="https://howiezhao.github.io" class="animate-slide-in-down">Notes</a>
-      <a href="shici/index.html" class="animate-slide-in-down">Blog</a>
-      <a href="https://www.douban.com/people/130184841" class="animate-slide-in-down">DouBan</a>
-    </div>
-    <div class="location">
-      <span class="location-icon animate-slide-in-up">
-        <i class="icon icon-map-pin"></i>
-      </span>
-      <span class="location-text animate-slide-in-down">Xi'an - China</span>
-    </div>
-    <div class="relocating">
-      Navigating to: <span class="relocate-location"></span>...
-    </div>
+    <div class="swiper-pagination"></div>
   </div>
 
+  <script src="assets/swiper/11.1.4/swiper-bundle.min.js"></script>
   <script src="assets/vendors/jquery-3.3.1.min.js"></script>
   <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      direction: 'vertical',
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      mousewheel: true,
+      keyboard: {
+        enabled: true,
+      },
+    });
+
     $(function () {
       var SLIDE_IN_DOWN = { opacity: 1, top: 0 };
       var SLIDE_IN_UP = { opacity: 1, bottom: 0 };
