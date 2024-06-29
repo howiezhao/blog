@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-darkmode="auto">
+<head>
+  <meta charset="UTF-8">
+  <title>Howie's Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../assets/heti/0.9.4/heti.min.css">
+</head>
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+
+      <hr>
+
+      <section class="demo">
+        <div class="heti heti--poetry">
+          <h1>钗头凤·红酥手<span class="heti-meta heti-small">[宋]陆游</span></h1>
+          <p class="heti-verse heti-x-large">
+            红酥手，黄縢酒，满城春色宫墙柳。<br>
+            东风恶，欢情薄。一怀愁绪，几年离索。<br>
+            错！错！错！<br>
+            <br>
+            春如旧，人空瘦，泪痕红浥鲛绡透。<br>
+            桃花落，闲池阁。山盟虽在，锦书难托。<br>
+            莫！莫！莫！
+          </p>
+        </div>
+        <hr>
+        <div class="heti heti--poetry">
+          <h1>钗头凤·世情薄<span class="heti-meta heti-small">[宋]唐琬</span></h1>
+          <p class="heti-verse heti-x-large">
+            世情薄，人情恶，雨送黄昏花易落。<br>
+            晓风干，泪痕残。欲笺心事，独语斜阑。<br>
+            难！难！难！<br>
+            <br>
+            人成各，今非昨，病魂长似秋千索。<br>
+            角声寒，夜阑珊。怕人寻问，咽泪装欢。<br>
+            瞒！瞒！瞒！
+          </p>
+        </div>
+      </section>
+
+      <hr>
+    </article>
+  </main>
+
+  <script src="../assets/heti/0.9.4/heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    const heti = new Heti('.article')
+    heti.autoSpacing()
+  </script>
+</body>
+</html>
